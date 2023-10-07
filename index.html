@@ -4,37 +4,57 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Maintenance</title>
-        <link rel="stylesheet" href="/css/index.css">
+        <title>DEVALEX</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/theme/color1.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-        <img src="/img/logo_devalex.png" width="300" />
-        <h1>Maintenance en cours...</h1>
-        <p id="disponible">Disponible dans :</p>
-
-        <div class="countdown">
-            <div class="countdown-item">
-                <p id="jours"></p>
-                <label>Jours</label>
+        <div class="main-container">
+            <div class="aside">
+                <div class="logo">
+                    <a href="#"><img src="/img/logo_devalex.png" width="150" alt="devalex"></a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                </div>
+                <ul class="nav">
+                    <li><a href="#" class="active"><i class="fa fa-home"></i> Accueil </a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> À propos </a></li>
+                    <li><a href="#"><i class="fa fa-list"></i> Services </a></li>
+                    <li><a href="#"><i class="fa fa-briefcase"></i> Réalisations </a></li>
+                    <li><a href="#"><i class="fa fa-comments"></i> Contact </a></li>
+                </ul>
+                <ul class="social-icons">
+                    <li><a title="github" href="https://github.com/Oursel06"><i class="fa fa-github"></i></a></li>
+                    <li><a title="linkedin" href="https://www.linkedin.com/in/alexandre-oursel06"> <i
+                                class="fa fa-linkedin-square"></i></a></li>
+                    <li><a title="mail" href="mailto:contact@devalex.site"><i class="fa fa-envelope"></i></a></li>
+                </ul>
             </div>
-            <div class="countdown-item">
-                <p id="heures"></p>
-                <label>Heures</label>
-            </div>
-            <div class="countdown-item">
-                <p id="minutes"></p>
-                <label>Minutes</label>
-            </div>
-            <div class="countdown-item">
-                <p id="secondes"></p>
-                <label>Secondes</label>
+            <div class="main-content">
+                <section class="home section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="home-info padd-15">
+                                <h1 class="hello">Alexandre <span class="theme"> Oursel </span></h1>
+                                <h3 class="profession">Développeur de sites vitrines </h3>
+                                <p> Bienvenue sur sur mon portfolio, une plateforme sur laquelle vous pourrez explorer
+                                    mes projets, mon profil et découvrir les services que je mets à votre disposition.
+                                </p>
+                                <a href="#contact" class="btn hire-me">Me contacter</a>
+                            </div>
+                            <div class="home-img padd-15">
+                                <img src="img/profile.jpg" alt="Alexandre Oursel">
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-
-        <script src="/js/index.js">
-
-        </script>
+        <script src="js/script.js"></script>
     </body>
 
 </html>
