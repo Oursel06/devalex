@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
 
-    <body>
+    <body class="">
         <div class="main-container">
             <div class="aside">
                 <div class="logo">
@@ -23,11 +23,11 @@
                     <span></span>
                 </div>
                 <ul class="nav">
-                    <li><a href="#" class="active"><i class="fa fa-home"></i> Accueil </a></li>
-                    <li><a href="#"><i class="fa fa-user"></i> À propos </a></li>
-                    <li><a href="#"><i class="fa fa-list"></i> Services </a></li>
-                    <li><a href="#"><i class="fa fa-briefcase"></i> Réalisations </a></li>
-                    <li><a href="#"><i class="fa fa-comments"></i> Contact </a></li>
+                    <li><a href="#accueil" class="active"><i class="fa fa-home"></i> Accueil </a></li>
+                    <li><a href="#apropos"><i class="fa fa-user"></i> À propos </a></li>
+                    <li><a href="#service"><i class="fa fa-list"></i> Services </a></li>
+                    <!-- <li><a href="#realisation"><i class="fa fa-briefcase"></i> Réalisations </a></li> -->
+                    <li><a href="#contact"><i class="fa fa-comments"></i> Contact </a></li>
                 </ul>
                 <ul class="social-icons">
                     <li><a title="github" href="https://github.com/Oursel06"><i class="fa fa-github"></i></a></li>
@@ -37,16 +37,16 @@
                 </ul>
             </div>
             <div class="main-content">
-                <section class="home section hidden">
+                <section id="accueil" class="home section">
                     <div class="container">
                         <div class="row">
                             <div class="home-info padd-15">
                                 <h1 class="hello">Alexandre <span> Oursel </span></h1>
                                 <h3 class="profession">Développeur de sites vitrines </h3>
                                 <p>
-                                    <span class="quote">“</span> Un site vitrine n'est pas seulement une présence
+                                    <span id="quote">“</span> Un site vitrine n'est pas seulement une présence
                                     sur internet, c'est votre chance de briller, d'attirer votre audience et de séduire
-                                    les visiteurs pour les fidéliser.<span class="quote">”</span>
+                                    les visiteurs pour les fidéliser.<span id="quote">”</span>
                                 </p>
 
                                 <a href="#contact" class="btn hire-me">Me contacter</a>
@@ -58,7 +58,7 @@
                     </div>
                 </section>
 
-                <section class="about section hidden">
+                <section id="apropos" class="about section">
                     <div class="container">
                         <div class="row">
                             <div class="section-title padd-15">
@@ -103,7 +103,7 @@
                     </div>
                 </section>
 
-                <section class="service section">
+                <section id="service" class="service section">
                     <div class="container">
                         <div class="row">
                             <div class="section-title padd-15">
@@ -157,7 +157,7 @@
                     </div>
                 </section>
 
-                <section class="contact section hidden">
+                <section id="contact" class="contact section">
                     <div class="container">
                         <div class="row">
                             <div class="section-title padd-15">
