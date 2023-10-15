@@ -7,10 +7,10 @@
         <title>DEVALEX</title>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/theme/color1.css" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href=' https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+        </script>
     </head>
 
     <body class="">
@@ -30,10 +30,13 @@
                     <li><a href="#contact"><i class="fa fa-comments"></i> Contact </a></li>
                 </ul>
                 <ul class="social-icons">
-                    <li><a title="github" href="https://github.com/Oursel06"><i class="fa fa-github"></i></a></li>
-                    <li><a title="linkedin" href="https://www.linkedin.com/in/alexandre-oursel06"> <i
-                                class="fa fa-linkedin-square"></i></a></li>
-                    <li><a title="mail" href="mailto:contact@devalex.site"><i class="fa fa-envelope"></i></a></li>
+                    <li><a title="github" href="https://github.com/Oursel06"><img alt="github" src="img/github.svg" />
+                        </a>
+                    </li>
+                    <li><a title="linkedin" href="https://www.linkedin.com/in/alexandre-oursel06"><img alt="linkedin"
+                                src="img/linkedin.svg" /></a></li>
+                    <li><a title="mail" href="mailto:contact@devalex.site"><img alt="mail" src="img/mail.svg" /></i></a>
+                    </li>
                 </ul>
             </div>
             <div class="main-content">
@@ -79,22 +82,22 @@
                                     <div class="personal-info padd-15">
                                         <p>Langages</p>
                                         <div class="row">
-                                            <img class="icon-langage" alt="html" title="HTML" src="img/html.svg" />
-                                            <img class="icon-langage" alt="css" title="CSS" src="img/css.svg" />
-                                            <img class="icon-langage" alt="php" title="PHP" src="img/php.svg" />
-                                            <img class="icon-langage" alt="javascript" title="JavaScript"
-                                                src="img/js.svg" />
+                                            <img alt="html" title="HTML" src="img/html.svg" />
+                                            <img alt="css" title="CSS" src="img/css.svg" />
+                                            <img alt="php" title="PHP" src="img/php.svg" />
+                                            <img alt="javascript" title="JavaScript" src="img/js.svg" />
                                         </div>
                                     </div>
                                     <div class="skills padd-15">
                                         <p>Outils utilisés :</p>
                                         <div class="row">
-                                            <img class="icon-langage" alt="figma" title="Figma" src="img/figma.svg" />
-                                            <img class="icon-langage" alt="adobexd" title="AdobeXD"
-                                                src="img/adobexd.svg" />
-                                            <img class="icon-langage" alt="wordpress" title="WordPress"
-                                                src="img/wordpress.svg" />
-                                            <img class="icon-langage" alt="mysql" title="MySQL" src="img/mysql.svg" />
+                                            <img alt="figma" title="Figma" src="img/figma.svg" />
+                                            <img alt="adobexd" title="AdobeXD" src="img/adobexd.svg" />
+                                            <img alt="wordpress" title="WordPress" src="img/wordpress.svg" />
+                                            <img alt="mysql" title="MySQL" src="img/mysql.svg" />
+                                            <img alt="jquery" title="JQuery" src="img/jquery.svg" />
+                                            <img alt="bootstrap" title="Bootstrap" src="img/bootstrap.svg" />
+                                            <img alt="react" title="React" src="img/react.svg" />
                                         </div>
                                     </div>
                                 </div>
@@ -120,6 +123,31 @@
                                     <p>Vous souhaitez mieux faire connaître votre profil ou votre activité ? Optez dès
                                         maintenant pour un site vitrine professionnel sur mesure qui répondra à toutes
                                         vos attentes.</p>
+                                    <div id="service-creation-text" class="hidden">
+                                        <hr>
+                                        <div class="service-subtitle">À propos du service</div>
+                                        <p>Je mets à votre disposition mon expertise pour concevoir des sites web
+                                            personnalisés qui reflètent votre identité, votre style et les objectifs de
+                                            votre entreprise. <br> Que vous soyez un travailleur indépendant, une petite
+                                            entreprise ou un entrepreneur, je vous propose des solutions web adaptées à
+                                            vos besoins.</p>
+                                        <hr>
+                                        <div class="service-subtitle">Le Processus de Création</div>
+                                        <p><strong>Consultation</strong> : Nous commencerons par discuter de vos
+                                            besoins, vos objectifs et vos préférences. <br> Cela me permettra de cerner
+                                            vos attentes et de concevoir un plan sur mesure.</p>
+                                        <p><strong>Conception et Développement</strong> : Je passerai à la phase de
+                                            conception et de développement en utilisant les outils adaptés à votre
+                                            demande.</p>
+                                        <p><strong>Révision et Approbation</strong> : Je vous présenterai le site pour
+                                            que vous puissiez y suggérer des modifications si nécessaire.</p>
+                                        <p><strong>Hébergement</strong> : Une fois que vous êtes satisfait, je vous
+                                            accompagnerai dans l'hébergement de votre site pour le rendre accessible à
+                                            tous. </p>
+                                    </div>
+                                    <div id="service-creation-more"><i id="icon-creation-more"
+                                            class="fa fa-chevron-down fa-beat"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="service-item padd-15">
@@ -128,24 +156,67 @@
                                         <i class="fa fa-wrench"></i>
                                     </div>
                                     <h4>Refonte de sites vitrines</h4>
-                                    <p>Vous avez déjà un site ? Est-il encore au goût du jour ? </p>
+                                    <p>Votre site web est toujours au goût du jour ? Offrez une nouvelle vie à votre
+                                        présence en ligne.</p>
+                                    <div id="service-refonte-text" class="hidden">
+                                        <hr>
+                                        <div class="service-subtitle">À propos du service</div>
+                                        <p>Je peux vous aider à transformer un site web obsolète en une
+                                            plateforme moderne. <br> Cela peut concerner le design, l'optimisation des
+                                            fonctionnalités ou encore améliorer la convivialité de votre site.</p>
+                                        <hr>
+                                        <div class="service-subtitle">Le Processus de Refonte</div>
+                                        <p><strong>Évaluation Initiale</strong> : Nous évaluerons votre
+                                            site actuel pour identifier les points faibles et ce qui peut être amélioré.
+                                        </p>
+                                        <p><strong>Conception et Développement</strong> : Je réaliserai un nouveau
+                                            design et/ou je développerai les fonctionnalités nécessaires pour la refonte
+                                            de votre site.</p>
+                                        <p><strong>Mise à jour</strong> : Une fois la nouvelle version validée,
+                                            je vous accompagnerai dans la mise à jour de votre site.</p>
+                                    </div>
+                                    <div id="service-refonte-more"><i id="icon-refonte-more"
+                                            class="fa fa-chevron-down fa-beat"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="service-item padd-15">
                                 <div class="service-item-inner">
                                     <div class="icon">
-                                        <i class="fa fa-arrow-up"></i>
+                                        <i class="fa fa-magnifying-glass"></i>
                                     </div>
                                     <h4>Référencement</h4>
                                     <p>Avoir un site c'est bien, faire en sorte qu'il soit visible c'est encore
-                                        mieux ! Le référencement est aujourd'hui indispensable pour un site web. Il
-                                        permet de...</p>
+                                        mieux ! Le référencement est aujourd'hui essentiel pour tout site web, car il
+                                        permet d'assurer sa visibilité et son succès en ligne.</p>
+                                    <div id="service-referencement-text" class="hidden">
+                                        <hr>
+                                        <div class="service-subtitle">À propos du service</div>
+                                        <p>Ce service comprend une approche technique qui exploite des algorithmes de
+                                            recherche, optimise les mots-clés, la structure du site, la vitesse de
+                                            chargement des pages, et veille à l'expérience utilisateur pour améliorer
+                                            votre classement.</p>
+                                        <hr>
+                                        <div class="service-subtitle">Le Processus de Référencement</div>
+                                        <p><strong>Analyse Technique</strong> : Nous effectuerons une analyse des
+                                            données relatives au trafic, aux performances des mots-clés, et de la
+                                            structure du site.
+                                        </p>
+                                        <p><strong>Conception et Développement</strong> : Je vous propose des
+                                            améliorations techniques, telles que l'optimisation des performances, de la
+                                            structure et la correction des problèmes d'indexation.</p>
+                                        <p><strong>Mise à jour</strong> : Après la publication de la nouvelle version,
+                                            nous constaterons ensemble l'évolution de votre site.</p>
+                                    </div>
+                                    <div id="service-referencement-more"><i id="icon-referencement-more"
+                                            class="fa fa-chevron-down fa-beat"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="service-item padd-15">
                                 <div class="service-item-inner">
                                     <div class="icon">
-                                        <i class="fa fa-server"></i>
+                                        <i class="fa fa-image"></i>
                                     </div>
                                     <h4>Prototypage</h4>
                                     <p>Je peux réaliser des prototypes sous forme de maquettes afin de mieux vous

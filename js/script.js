@@ -9,6 +9,18 @@ var cleanForm = () => {
     $("#message").val("");
 }
 
+var slideService = (icon, div) => {
+    icon.toggleClass("fa-chevron-down fa-chevron-up");
+    if (div.hasClass("hidden")) {
+        div.removeClass("hidden");
+        div.slideUp(0).slideDown(300); // Apparition avec animation
+    } else {
+        div.slideUp(300, function () {
+            div.addClass("hidden");
+        });
+    }
+}
+
 // Ajax vers la fonction envoi de mail
 $("#envoyer").on("click", function () {
     $("#envoyer").addClass("disable");
@@ -73,4 +85,16 @@ $('#close-message-form').on('click', function () {
 
 $('#effacer').on('click', function () {
     cleanForm();
+});
+
+$('#service-creation-more').on('click', function () {
+    slideService($('#icon-creation-more'), $("#service-creation-text"));
+});
+
+$('#service-refonte-more').on('click', function () {
+    slideService($('#icon-refonte-more'), $("#service-refonte-text"));
+});
+
+$('#service-referencement-more').on('click', function () {
+    slideService($('#icon-referencement-more'), $("#service-referencement-text"));
 });
