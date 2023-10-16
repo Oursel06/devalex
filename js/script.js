@@ -1,3 +1,15 @@
+// Notification accueil
+$(".accueil_notif").show(500);
+window.setTimeout(masquernotification, 10000);
+// var now = new Date();
+// if (now.getHours() < 19) { document.getElementById("accueil_heure").innerHTML = "Bonjour" }
+// else {
+//     document.getElementById("accueil_heure").innerHTML = "Bonsoir"
+// }
+
+function masquernotification() {
+    $(".accueil_notif").hide(400);
+}
 
 
 // Contact

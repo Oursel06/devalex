@@ -114,6 +114,44 @@ ul {
     transform: scale(1.05);
 }
 
+/* Notification accueil */
+.accueil_notif {
+    position: fixed;
+    display: none;
+    color: var(--text-black-900);
+    top: 30px;
+    overflow: hidden;
+    background-color: #fcf8e3;
+    box-shadow: var(--bg-black-50) 0px 0px 6px 0px;
+    border-radius: 10px;
+    margin: auto;
+    left: 270px;
+    right: 0;
+    width: 80%;
+    z-index: 2;
+}
+
+.accueil_notif i {
+    position: absolute;
+    top: 50%;
+    color: orange;
+    border-right: 1px solid #fff1ab;
+    padding: 10px;
+    background: #fcf8e3;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+}
+
+.accueil_notif_text {
+    animation: moveaccueil_msg 15s linear;
+    /* animation-timing-function: linear; */
+    margin: 0;
+    color: var(--text-black-900);
+    font-size: 20px;
+    top: 50%;
+}
+
 /* Sidebar */
 .aside {
     width: 270px;
@@ -698,10 +736,25 @@ textarea:focus {
     transform: scale(1.01);
 }
 
+/* Animation */
+@keyframes moveaccueil_msg {
+    0% {
+        transform: translate(120%)
+    }
+
+    100% {
+        transform: translate(-120%)
+    }
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
     .aside {
         left: -270px;
+    }
+
+    .accueil_notif {
+        left: 0;
     }
 
     .main-content {
@@ -758,9 +811,3 @@ textarea:focus {
     pointer-events: none !important;
     opacity: 0.5 !important;
 }
-
-/* https://alexdeanwebdesign.com */
-/* https://www.youtube.com/watch?v=zJE-ze4TfXc&list=PLrKudo5h_b8CKGtcPWIYtWmbTokv8QhlY&index=1&ab_channel=CrypticalCoder */
-/* Text défilant : https://codepen.io/bazooka07/pen/vjjbQP */
-/* accordion : https://codepen.io/tokyoweb/pen/EezZmr */
-/* table prix : https://codepen.io/FrankieDoodie/pen/LJxEMB */
