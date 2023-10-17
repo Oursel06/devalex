@@ -11,10 +11,33 @@ function masquernotification() {
     $(".accueil_notif").hide(400);
 }
 
+// Sidebar
+const nav = document.querySelector(".nav"),
+    navlist = nav.querySelectorAll("li"),
+    totalNavList = navlist.length,
+    allSection = document.querySelectorAll(".section"),
+    totalSection = allSection.length;
+console.log("totalSection => " + totalSection);
+for (let i = 0; i < totalNavList; i++) {
+    const a = navlist[i].querySelector("a");
+    a.addEventListener("click", function () {
+        for (let j = 0; j < totalNavList; j++) {
+            navlist[j].querySelector("a").classList.remove("active")
+        }
+        this.classList.add("active");
+        showSection(this);
+    })
+}
+
+const showSection = (elem) => {
+    for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.remove("active");
+    }
+    const target = elem.getAttribute("href").split("#")[1];
+    document.querySelector("#" + target).classList.add("active");
+}
 
 // Contact
-
-// Vide les champs du formulaire de contact
 var cleanForm = () => {
     $("#email").val("");
     $("#sujet").val("");
@@ -25,7 +48,7 @@ var slideService = (icon, div) => {
     icon.toggleClass("fa-chevron-down fa-chevron-up");
     if (div.hasClass("hidden")) {
         div.removeClass("hidden");
-        div.slideUp(0).slideDown(300); // Apparition avec animation
+        div.slideUp(0).slideDown(300);
     } else {
         div.slideUp(300, function () {
             div.addClass("hidden");
@@ -33,7 +56,6 @@ var slideService = (icon, div) => {
     }
 }
 
-// Ajax vers la fonction envoi de mail
 $("#envoyer").on("click", function () {
     $("#envoyer").addClass("disable");
     $(".message-form").addClass("hidden");
@@ -99,6 +121,7 @@ $('#effacer').on('click', function () {
     cleanForm();
 });
 
+// Service
 $('#service-creation-more').on('click', function () {
     slideService($('#icon-creation-more'), $("#service-creation-text"));
 });
@@ -109,4 +132,8 @@ $('#service-refonte-more').on('click', function () {
 
 $('#service-referencement-more').on('click', function () {
     slideService($('#icon-referencement-more'), $("#service-referencement-text"));
+});
+
+$('#service-maquette-more').on('click', function () {
+    slideService($('#icon-maquette-more'), $("#service-maquette-text"));
 });
