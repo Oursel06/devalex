@@ -1,6 +1,6 @@
 // Notification accueil
 $(".accueil_notif").show(500);
-window.setTimeout(masquernotification, 10000);
+window.setTimeout(masquernotification, 12000);
 // var now = new Date();
 // if (now.getHours() < 19) { document.getElementById("accueil_heure").innerHTML = "Bonjour" }
 // else {
@@ -11,22 +11,56 @@ function masquernotification() {
     $(".accueil_notif").hide(400);
 }
 
-// Sidebar
+// Sidebar et nav
 const nav = document.querySelector(".nav"),
     navlist = nav.querySelectorAll("li"),
     totalNavList = navlist.length,
     allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length;
-console.log("totalSection => " + totalSection);
 for (let i = 0; i < totalNavList; i++) {
     const a = navlist[i].querySelector("a");
     a.addEventListener("click", function () {
+        removeBackSection();
         for (let j = 0; j < totalNavList; j++) {
+            if (navlist[j].querySelector("a").classList.contains("active")) {
+                allSection[j].classList.add("back-section");
+            }
             navlist[j].querySelector("a").classList.remove("active")
         }
         this.classList.add("active");
         showSection(this);
     })
+}
+
+document.querySelector(".contact-moi").addEventListener("click", function () {
+    const sectionIndex = this.getAttribute("data-section-index");
+    showSection(this);
+    updateNav(this);
+    removeBackSection();
+    allSection[sectionIndex].classList.add("back-section");
+});
+
+const navTogglerBtn = document.querySelector(".nav-toggle"),
+    notif = document.querySelector(".accueil_notif"),
+    aside = document.querySelector(".aside");
+navTogglerBtn.addEventListener("click", function () {
+    asideSectionTogglerBtn();
+})
+
+const removeBackSection = () => {
+    for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.remove("back-section");
+    }
+}
+
+const updateNav = (elem) => {
+    for (let i = 0; i < totalNavList; i++) {
+        navlist[i].querySelector("a").classList.remove("active");
+        const target = elem.getAttribute("href").split("#")[1];
+        if (target === navlist[i].querySelector("a").getAttribute("href").split("#")[1]) {
+            navlist[i].querySelector("a").classList.add("active");
+        }
+    }
 }
 
 const showSection = (elem) => {
@@ -35,6 +69,15 @@ const showSection = (elem) => {
     }
     const target = elem.getAttribute("href").split("#")[1];
     document.querySelector("#" + target).classList.add("active");
+}
+
+const asideSectionTogglerBtn = () => {
+    aside.classList.toggle("open");
+    navTogglerBtn.classList.toggle("open");
+    notif.classList.toggle("open");
+    for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.toggle("open");
+    }
 }
 
 // Contact
