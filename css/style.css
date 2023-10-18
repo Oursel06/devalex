@@ -151,9 +151,16 @@ h3 span {
     margin: auto;
     left: 270px;
     right: 0;
-    width: 80%;
+    width: 70%;
     opacity: .9;
     z-index: 9;
+}
+
+.accueil_notif .content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .accueil_notif i {
@@ -168,8 +175,7 @@ h3 span {
 }
 
 .accueil_notif_text {
-    animation: moveaccueil_msg 15s linear;
-    /* animation-timing-function: linear; */
+    animation: moveaccueil_msg_desktop 13s linear;
     margin: 0;
     color: var(--text-black-900);
     font-size: 20px;
@@ -796,9 +802,19 @@ textarea:focus {
 }
 
 /* Animation */
-@keyframes moveaccueil_msg {
+@keyframes moveaccueil_msg_desktop {
     0% {
-        transform: translate(120%)
+        transform: translate(150%)
+    }
+
+    100% {
+        transform: translate(-120%)
+    }
+}
+
+@keyframes moveaccueil_msg_mobile {
+    0% {
+        transform: translate(80%)
     }
 
     100% {
@@ -881,6 +897,15 @@ textarea:focus {
 }
 
 @media (max-width: 750px) {
+    .accueil_notif .content {
+        padding: 2px;
+    }
+
+    .accueil_notif_text {
+        font-size: 14px;
+        animation: moveaccueil_msg_mobile 13s linear;
+    }
+
     h1.hello {
         font-size: 30px;
         letter-spacing: 2px;

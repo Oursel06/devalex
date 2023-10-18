@@ -69,6 +69,10 @@ const showSection = (elem) => {
     }
     const target = elem.getAttribute("href").split("#")[1];
     document.querySelector("#" + target).classList.add("active");
+
+    if (window.innerWidth <= 1200) {
+        asideSectionTogglerBtn();
+    }
 }
 
 const asideSectionTogglerBtn = () => {
