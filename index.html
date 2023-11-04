@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DEVALEX</title>
+        <link rel="icon" href="img/mini_logo_devalex.png" type="image/icon type">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/theme/color1.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -26,7 +27,8 @@
                     <li><a href="#accueil" class="active"><i class="fa fa-home"></i> Accueil </a></li>
                     <li><a href="#apropos"><i class="fa fa-user"></i> À propos </a></li>
                     <li><a href="#service"><i class="fa fa-list"></i> Services </a></li>
-                    <!-- <li><a href="#realisation"><i class="fa fa-briefcase"></i> Réalisations </a></li> -->
+                    <li><a href="#tarification"><i class="fa fa-euro-sign"></i> Tarification </a></li>
+                    <li><a href="#realisation"><i class="fa fa-briefcase"></i> Réalisations </a></li>
                     <li><a href="#contact"><i class="fa fa-comments"></i> Contact </a></li>
                 </ul>
                 <ul class="social-icons">
@@ -42,9 +44,11 @@
             </div>
 
             <div class="accueil_notif">
-                <i class="fa fa-bullhorn"></i>
-                <p class="accueil_notif_text">Bienvenue sur mon portfolio ! Du nouveau contenu arrivera très
-                    prochainement</p>
+                <div class="content">
+                    <i class="fa fa-bullhorn"></i>
+                    <p class="accueil_notif_text">Bienvenue sur mon portfolio ! Du nouveau contenu arrivera très
+                        prochainement</p>
+                </div>
             </div>
 
             <div class="main-content">
@@ -143,6 +147,76 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="realisation" class="realisation section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="section-title padd-15">
+                                <h2>Réalisations</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-side card-side-front">
+                                    <h2>Titre du projet</h2>
+                                </div>
+                                <div class="card-side card-side-back">
+                                    <p class="card-text">Texte de présentation du projet en quelques lignes
+                                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
+                                        mise en page avant impression. Le Lorem Ipsum est le faux texte standard de
+                                        l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
+                                        ensemble des morceaux de texte pour réaliser un livre spécimen de polices de
+                                        texte.mise en page avant impression.
+                                    </p>
+                                    <div class="label-techno-item">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>PHP</span>
+                                        <span>Bootstrap 5</span>
+                                    </div>
+                                    <div class="cards-buttons">
+                                        <hr>
+                                        <a href="" class="btn"><i class="fa fa-link"></i> Github </a>
+                                        <a href="" class="btn"><i class="fa fa-globe"></i> Site </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-side card-side-front">
+                                    <h2>Titre du projet 2 </h2>
+                                </div>
+                                <div class="card-side card-side-back">
+                                    <p class="card-text">Texte de présentation du projet 2 en quelques lignes
+                                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
+                                        mise en page avant impression. Le Lorem Ipsum est le faux texte standard de
+                                        l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
+                                        ensemble des morceaux de texte pour réaliser un livre spécimen de polices de
+                                        texte.
+                                    </p>
+                                    <div class="cards-buttons">
+                                        <a href="" class="btn"><i class="fa fa-link"></i> Github 2 </a>
+                                        <a href="" class="btn"><i class="fa fa-globe"></i> Site 2 </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-side card-side-front">
+                                    <h2>Titre du projet 3</h2>
+                                </div>
+                                <div class="card-side card-side-back">
+                                    <p class="card-text">Texte de présentation du projet 3 </p>
+                                    <div class="cards-buttons">
+                                        <a href="" class="btn"><i class="fa fa-link"></i> Github 3 </a>
+                                        <a href="" class="btn"><i class="fa fa-globe"></i> Site 3 </a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </section>
@@ -287,7 +361,185 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
 
+                <section id="tarification" class="tarification section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="section-title padd-15">
+                                <h2>Tarification</h2>
+                            </div>
+                        </div>
+                        <div class="row padd-15">
+                            <div class="info-tarif">
+                                <p><i class="fa fa-warning"></i> Les tarifs indiqués ci-dessous sont fournis à titre
+                                    indicatif et peuvent varier selon la demande.</p>
+                            </div>
+
+                            <p id="totalPrice">Prix : 0€</p>
+                            <!-- <h3>Design</h3> -->
+
+                            <div class="design">
+                                <div class="labelitem">
+                                    <label>
+                                        <div class="labelinfo">
+                                            <input type="radio" name="designoption" data-price="500">
+                                            <span class="price">500€</span>
+                                            <p class="labeltitle"> Simple </p>
+                                            <p class="labeldescription">Ce template contient un menu de navigation
+                                                horizontal ou vertical avec une page de couverture, une page à
+                                                propos et un pied de page.
+                                            </p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="labelitem">
+                                    <label>
+                                        <div class="labelinfo">
+                                            <input type="radio" name="designoption" data-price="900">
+                                            <span class="price">900€</span>
+                                            <p class="labeltitle">Personnalisé</p>
+                                            <p class="labeldescription">Adaptation du design en fonction de la
+                                                maquette que vous proposez.
+                                            </p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="labelitem">
+                                    <label>
+                                        <div class="labelinfo">
+                                            <input type="radio" name="designoption" data-price="2500">
+                                            <span class="price">2500€</span>
+                                            <p class="labeltitle">Sur mesure</p>
+                                            <p class="labeldescription">Conception d'une ou plusieurs maquette(s)
+                                                puis adaptation du design en fonction de la maquette retenue.
+                                            </p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="functionality hidden">
+                                <h3>Fonctionnalités souhaitées :</h3>
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="50"> Liens
+                                            vers les réseaux sociaux - 50€ (pour 4
+                                            réseaux puis +20€ par réseau en plus)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="500"> Blog ou
+                                            actualités - 500€ (actualité /
+                                            informations dynamiques)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="100"> Module
+                                            Langages - 100€ (+50€ par langue ajoutée)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="500"> Module
+                                            de paiement - 500€
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="400"> Module
+                                            de connexion et inscription - 400€
+                                            (inscription / connexion / profil)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="100"> Galerie
+                                            d'images - 100€ (carroussel / album +50€
+                                            si les images ne sont pas fournies car droit d'auteur ou licence...)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="200">
+                                            Formulaire de contact - 200€
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="0">
+                                            Intégration coordonnées - GRATUIT
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="100"> Carte de
+                                            localisation - 100€ (carte map avec
+                                            localisation de l'entreprise / client)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="200"> Zone de
+                                            téléchargement - 200€ (bouton / lien pour
+                                            télécharger document / image...)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="150"> Moteur
+                                            de recherche interne - 150€ (barre de
+                                            recherche intégré au site)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="200">
+                                            Intégration de médias - 200€ (vidéos, podcast,
+                                            diaporama...)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="200">
+                                            Analytics et suivi - 200€ (intégration de solution
+                                            d'analyse web pour performance et référencement)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="0"> Mise à
+                                            jour et maintenance - Variable en fonction des besoins
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="150"> Appel à
+                                            l'action - 150€ (Boutons / liens / modal incitant à l'action comme la
+                                            demande d'un devis ou contact)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="200">
+                                            Témoignages et avis clients - 200€
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="functionalityOption" data-price="250"> Module
+                                            de demande de devis - 250€
+                                        </label>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -333,3 +585,12 @@
     </body>
 
 </html>
+
+
+
+
+<!-- PORTFOLIO -->
+<!-- Card hover : https://codepen.io/serigala/pen/qBdaqjv -->
+<!-- Card filter : https://codepen.io/El-CaSseGraiN/pen/mdJQOEV -->
+<!-- Card flip : https://codepen.io/tjegan/pen/zrMdEO OU https://codepen.io/jsulpis/pen/yLaemeO -->
+<!-- Ruban : https://codepen.io/nomack/pen/DRJbgp -->

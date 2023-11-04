@@ -69,6 +69,10 @@ const showSection = (elem) => {
     }
     const target = elem.getAttribute("href").split("#")[1];
     document.querySelector("#" + target).classList.add("active");
+
+    if (window.innerWidth <= 1200) {
+        asideSectionTogglerBtn();
+    }
 }
 
 const asideSectionTogglerBtn = () => {
@@ -179,4 +183,40 @@ $('#service-referencement-more').on('click', function () {
 
 $('#service-maquette-more').on('click', function () {
     slideService($('#icon-maquette-more'), $("#service-maquette-text"));
+});
+
+// Tarification
+const functionalityDiv = $('.functionality');
+const checkboxElements = $('input[type="checkbox"]');
+const radioElements = $('input[type="radio"]');
+const totalPrice = $('#totalPrice');
+let currentTotalPrice = 0;
+
+radioElements.on('change', function () {
+    const price = parseFloat($(this).data('price'));
+    currentTotalPrice = price;
+    checkboxElements.prop('checked', false);
+    totalPrice.text("Prix : " + currentTotalPrice + "€");
+    functionalityDiv.removeClass('hidden');
+
+    $('.labelinfo').removeClass('active');
+
+    const labelInfo = $(this).closest('.labelinfo');
+    labelInfo.addClass('active');
+});
+
+checkboxElements.on('change', function () {
+    const price = parseFloat($(this).data('price'));
+
+    if ($(this).prop('checked')) {
+        currentTotalPrice += price;
+    } else {
+        currentTotalPrice -= price;
+    }
+
+    totalPrice.text("Prix : " + currentTotalPrice + "€");
+    $('.labelinfo').removeClass('active');
+
+    const labelInfo = $(this).closest('.labelinfo');
+    labelInfo.addClass('active');
 });
