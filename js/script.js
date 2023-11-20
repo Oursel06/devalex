@@ -220,3 +220,11 @@ checkboxElements.on('change', function () {
     const labelInfo = $(this).closest('.labelinfo');
     labelInfo.addClass('active');
 });
+
+var checkboxes = document.querySelectorAll('.functionality-item input[type="checkbox"]');
+checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
+        var parentDiv = $(this).closest('.functionality-item');
+        parentDiv.toggleClass('active');
+    });
+});

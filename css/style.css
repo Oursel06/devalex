@@ -758,6 +758,7 @@ h3.profession {
 
 .tarification .design .labelitem .labelinfo:hover,
 .tarification .design .labelitem .labelinfo.active,
+.tarification .functionality .functionality-item.active,
 .service .service-item .service-item-inner:hover,
 input:focus,
 textarea:focus,
@@ -818,6 +819,9 @@ textarea:focus,
     background: var(--bg-black-100);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 4px 0px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
