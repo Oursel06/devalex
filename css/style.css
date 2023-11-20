@@ -611,15 +611,6 @@ h3.profession {
     transition: all 0.3s ease-in-out;
 }
 
-.service .service-item .service-item-inner:hover {
-    box-shadow: var(--skin-color) 0px 0px 4px 0px;
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    -o-transform: scale(1.01);
-    transform: scale(1.01);
-}
-
 .service .service-item .service-item-inner:hover h4 {
     color: var(--skin-color);
 }
@@ -726,7 +717,6 @@ h3.profession {
 }
 
 /* Tarification */
-
 .tarification .info-tarif {
     position: relative;
     display: block;
@@ -741,10 +731,11 @@ h3.profession {
     display: flex;
 }
 
-.tarification .design .labelitem {
+.tarification .design .labelitem,
+.tarification .functionality .functionality-item {
     margin: 10px;
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
 }
 
 .tarification .design .labelitem .labelinfo {
@@ -756,6 +747,8 @@ h3.profession {
     border-radius: 10px;
     font-size: 16px;
     color: var(--text-black-900);
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 4px 0px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -764,7 +757,11 @@ h3.profession {
 }
 
 .tarification .design .labelitem .labelinfo:hover,
-.tarification .design .labelitem .labelinfo.active {
+.tarification .design .labelitem .labelinfo.active,
+.service .service-item .service-item-inner:hover,
+input:focus,
+textarea:focus,
+.tarification .functionality .functionality-item .functionality-item-info:hover {
     box-shadow: var(--skin-color) 0px 0px 4px 0px;
     -webkit-transform: scale(1.01);
     -moz-transform: scale(1.01);
@@ -807,6 +804,31 @@ h3.profession {
     left: 5px;
     transform: scale(1.4);
     outline: none;
+}
+
+.tarification .functionality h3 {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.tarification .functionality .functionality-item .functionality-item-info {
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 4px 0px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.tarification .functionality .functionality-item .functionality-item-info .functionality-title {
+    font-weight: 600;
+    color: var(--text-black-700);
+    font-size: 16px;
 }
 
 /* Contact */
@@ -975,16 +997,6 @@ input[type=reset]:hover {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
-}
-
-input:focus,
-textarea:focus {
-    box-shadow: var(--skin-color) 0px 0px 4px 0px;
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    -o-transform: scale(1.01);
-    transform: scale(1.01);
 }
 
 /* Animation */
