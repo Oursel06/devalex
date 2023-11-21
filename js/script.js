@@ -187,7 +187,7 @@ $('#service-maquette-more').on('click', function () {
 
 // Tarification
 const functionalityDiv = $('.functionality');
-const checkboxElements = $('input[type="checkbox"]');
+const checkboxElements = $('.functionality-item input[type="checkbox"]');
 const radioElements = $('input[type="radio"]');
 const totalPrice = $('#totalPrice');
 let currentTotalPrice = 0;
@@ -196,10 +196,11 @@ radioElements.on('change', function () {
     const price = parseFloat($(this).data('price'));
     currentTotalPrice = price;
     checkboxElements.prop('checked', false);
-    totalPrice.text("Prix : " + currentTotalPrice + "€");
+    totalPrice.text("Prix approximatif : " + currentTotalPrice + "€");
     functionalityDiv.removeClass('hidden');
 
     $('.labelinfo').removeClass('active');
+    $('.functionality-item').removeClass('active');
 
     const labelInfo = $(this).closest('.labelinfo');
     labelInfo.addClass('active');
@@ -214,17 +215,8 @@ checkboxElements.on('change', function () {
         currentTotalPrice -= price;
     }
 
-    totalPrice.text("Prix : " + currentTotalPrice + "€");
-    $('.labelinfo').removeClass('active');
+    totalPrice.text("Prix approximatif : " + currentTotalPrice + "€");
 
-    const labelInfo = $(this).closest('.labelinfo');
-    labelInfo.addClass('active');
-});
-
-var checkboxes = document.querySelectorAll('.functionality-item input[type="checkbox"]');
-checkboxes.forEach(function (checkbox) {
-    checkbox.addEventListener('change', function () {
-        var parentDiv = $(this).closest('.functionality-item');
-        parentDiv.toggleClass('active');
-    });
+    var parentDiv = $(this).closest('.functionality-item');
+    parentDiv.toggleClass('active');
 });
