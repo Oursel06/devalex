@@ -196,7 +196,7 @@ radioElements.on('change', function () {
     const price = parseFloat($(this).data('price'));
     currentTotalPrice = price;
     checkboxElements.prop('checked', false);
-    totalPrice.text("Prix approximatif : " + currentTotalPrice + "€");
+    totalPrice.text("Votre site web à partir de : " + currentTotalPrice + "€");
     functionalityDiv.removeClass('hidden');
 
     $('.labelinfo').removeClass('active');
@@ -215,7 +215,7 @@ checkboxElements.on('change', function () {
         currentTotalPrice -= price;
     }
 
-    totalPrice.text("Prix approximatif : " + currentTotalPrice + "€");
+    totalPrice.text("Votre site web à partir de : " + currentTotalPrice + "€");
 
     var parentDiv = $(this).closest('.functionality-item');
     parentDiv.toggleClass('active');
