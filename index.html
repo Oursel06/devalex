@@ -29,7 +29,7 @@
                 <li><a href="#accueil" class="active"><i class="fa fa-home"></i> Accueil </a></li>
                 <li><a href="#apropos"><i class="fa fa-user"></i> À propos </a></li>
                 <li><a href="#service"><i class="fa fa-list"></i> Services </a></li>
-                <li><a href="#tarification"><i class="fa fa-euro-sign"></i> Tarification </a></li>
+                <li><a href="#devis"><i class="fa fa-file-invoice-dollar"></i> Devis </a></li>
                 <li><a href="#realisation"><i class="fa fa-briefcase"></i> Réalisations </a></li>
                 <li><a href="#contact"><i class="fa fa-comments"></i> Contact </a></li>
             </ul>
@@ -296,28 +296,25 @@
                 </div>
             </section>
 
-            <section id="tarification" class="tarification section">
+            <section id="devis" class="devis section">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Tarification</h2>
+                            <h2>Devis</h2>
                         </div>
                     </div>
                     <div class="row padd-15">
                         <div class="info-tarif">
-                            <p><i class="fa fa-warning"></i> Les tarifs indiqués ci-dessous sont fournis à titre
-                                indicatif et peuvent varier selon la demande.</p>
+                            <p><i class="fa fa-warning"></i> Veuillez d'abord séléctionner une des trois options
+                                ci-dessous pour pouvoir finaliser la demande de votre devis en ligne en cliquant sur le
+                                bouton "Valider mon devis".</p>
                         </div>
-
-                        <p id="totalPrice">Votre site web à partir de : 0 €</p>
-                        <!-- <h3>Design</h3> -->
 
                         <div class="design">
                             <div class="labelitem">
                                 <label>
                                     <div class="labelinfo">
-                                        <input type="radio" name="designoption" data-price="800">
-                                        <span class="price">À partir de 800€</span>
+                                        <input type="radio" name="designoption" data-choix="simple">
                                         <p class="labeltitle"> Simple </p>
                                         <p class="labeldescription">Ce template contient un menu de navigation
                                             horizontal ou vertical avec une page de couverture, une page à
@@ -329,8 +326,7 @@
                             <div class="labelitem">
                                 <label>
                                     <div class="labelinfo">
-                                        <input type="radio" name="designoption" data-price="1500">
-                                        <span class="price">À partir de 1500€</span>
+                                        <input type="radio" name="designoption" data-choix="personnamisé">
                                         <p class="labeltitle">Personnalisé</p>
                                         <p class="labeldescription">Adaptation du design en fonction de la
                                             maquette que vous proposez.
@@ -341,8 +337,7 @@
                             <div class="labelitem">
                                 <label>
                                     <div class="labelinfo">
-                                        <input type="radio" name="designoption" data-price="2500">
-                                        <span class="price">À partir de 2500€</span>
+                                        <input type="radio" name="designoption" data-choix="sur mesure">
                                         <p class="labeltitle">Sur mesure</p>
                                         <p class="labeldescription">Conception des mokups, puis d'une ou plusieurs
                                             maquette(s) et adaptation du design en fonction de la maquette retenue.
@@ -355,184 +350,180 @@
                         <div class="functionality hidden">
                             <h3>Fonctionnalités souhaitées :</h3>
                             <div class="row padd-15">
-                                <div title="Permet d'ajouter des liens de redirection vers vos réseaux sociaux. (40€)&#013Peut apparaître sous forme de texte, image, logo, icon... "
+                                <div title="Permet d'ajouter des liens de redirection vers vos réseaux sociaux. &#013Peut apparaître sous forme de texte, image, logo, icon..."
                                     class="functionality-item">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="40">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="liens réseaux">
                                             <span class="functionality-title">Liens des réseaux sociaux</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item">
                                     <label>
-                                        <div title="Permet d'avoir une page indépendante pour gérer le contenu de votre site. (600€)&#013Cette option nécessite la création d'une base de données et d'une API."
+                                        <div title="Permet d'avoir une page indépendante pour gérer le contenu de votre site. &#013Cette option nécessite la création d'une base de données et d'une API."
                                             class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="600">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="interface administrateur">
                                             <span class="functionality-title"> Interface administrateur </span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Donne la possibilité de traduire le contenu de votre site. (80€)">
+                                    title="Donne la possibilité de traduire le contenu de votre site.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="80">
+                                            <input type="checkbox" name="functionalityOption" data-choix="langage">
                                             <span class="functionality-title">Module Langages</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'ajouter un ou plusieurs mode de paiement. (500€ - variable selon le mode de paiement)">
+                                    title="Permet d'ajouter un ou plusieurs mode de paiement. (variable selon le(s) mode(s) de paiement)">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="500">
+                                            <input type="checkbox" name="functionalityOption" data-choix="paiement">
                                             <span class="functionality-title">Module de paiement</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet à un utilisateur de s'enregistrer et se connecter à votre site. (600€)&#013Cette option nécessite la création d'une base de données et d'une API.&#013Comprend une page de connexion, d'inscription et de profil.">
+                                    title="Permet à un utilisateur de s'enregistrer et se connecter à votre site. &#013Cette option nécessite la création d'une base de données et d'une API.&#013Comprend une page de connexion, d'inscription et de profil.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="600">
+                                            <input type="checkbox" name="functionalityOption" data-choix="connexion">
                                             <span class="functionality-title">Module de connexion /
                                                 inscription</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'ajouter des albums de photos sur votre site. (100€)&#013Peut être sous la forme d'un carousel, d'une bibliothèque, d'une carte...&#013Un supplément de 50€ sera appliqué si les images ne sont pas fournies">
+                                    title="Permet d'ajouter des albums de photos sur votre site. &#013Peut être sous la forme d'un carousel, d'une bibliothèque, d'une carte...&#013Un supplément de 50€ sera appliqué si les images ne sont pas fournies">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="100">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="galerie image">
                                             <span class="functionality-title">Galerie d'images</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Donne la possibilité à un utilisateur d'envoyer un mail en passant directement par votre site. (200€)&#013Cette option nécessite l'intégration d'un serveur mail.&#013Vous devez préciser les champs nécessaires pour envoyer un mail.">
+                                    title="Donne la possibilité à un utilisateur d'envoyer un mail en passant directement par votre site. &#013Cette option nécessite l'intégration d'un serveur mail.&#013Vous devez préciser les champs nécessaires pour envoyer un mail.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="200">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="formulaire contact">
                                             <span class="functionality-title">Formulaire de contact</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'afficher une carte avec l'emplacement de votre entreprise ou zone d'activité. (40€)">
+                                    title="Permet d'afficher une carte avec l'emplacement de votre entreprise ou zone d'activité.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="40€">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="carte localisation">
                                             <span class="functionality-title">Carte de localisation</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'ajouter une zone pour télécharger un ou plusieurs fichier(s). (100€)&#013Peut apparaître sous forme de bouton, lien, image... ">
+                                    title="Permet d'ajouter une zone pour télécharger un ou plusieurs fichier(s). &#013Peut apparaître sous forme de bouton, lien, image... ">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="100">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="zone téléchargement">
                                             <span class="functionality-title">Zone de téléchargement</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'ajouter un champs de recherche pour accéder à différentes parties de votre site plus rapidement. (150€)">
+                                    title="Permet d'ajouter un champs de recherche pour accéder à différentes parties de votre site plus rapidement.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="150">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="moteur de recherche">
                                             <span class="functionality-title">Moteur de recherche interne</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'intégrer différents médias comme des vidéos, podcasts et diaporamas (150€)">
+                                    title="Permet d'intégrer différents médias comme des vidéos, podcasts et diaporamas">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="150">
+                                            <input type="checkbox" name="functionalityOption" data-choix="Médias">
                                             <span class="functionality-title">Intégration de médias</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'intégrer une solution d'analyse web (performance et / ou référencement). (250€)">
+                                    title="Permet d'intégrer une solution d'analyse web (performance et / ou référencement).">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="250">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="Analytic et suivi">
                                             <span class="functionality-title">Analytics et suivi</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'afficher des boîtes de dialogues pour inciter les utilisateurs à effectuer une action. (80€)&#013Peut apparaître sous forme de bouton, lien ou modal.">
+                                    title="Permet d'afficher des boîtes de dialogues pour inciter les utilisateurs à effectuer une action. &#013Peut apparaître sous forme de bouton, lien ou modal.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="80">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="Appel à action">
                                             <span class="functionality-title">Appel à l'action</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'ajouter une partie témoignages et avis de vos clients. (150€)">
+                                    title="Permet d'ajouter une partie témoignages et avis de vos clients.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="150">
+                                            <input type="checkbox" name="functionalityOption" data-choix="Témoignages">
                                             <span class="functionality-title">Témoignages et avis clients</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Permet d'accéder à un formulaire ou document à remplir par l'utilisateur. (250€)">
+                                    title="Permet d'accéder à un formulaire ou document à remplir par l'utilisateur.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="250">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="Demande de devis">
                                             <span class="functionality-title">Module de demande de devis</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                                 <div class="functionality-item"
-                                    title="Ajoute un bouton qui permet à l'utilisateur de changer le thème générale du site. (150€)">
+                                    title="Ajoute un bouton qui permet à l'utilisateur de changer le thème générale du site.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-price="150">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="thème sombre clair">
                                             <span class="functionality-title">Thème sombre / clair</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
-
                             </div>
+                            <a href="" class="btn"> Valider mon devis </a>
                         </div>
                     </div>
                 </div>

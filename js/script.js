@@ -185,18 +185,13 @@ $('#service-maquette-more').on('click', function () {
     slideService($('#icon-maquette-more'), $("#service-maquette-text"));
 });
 
-// Tarification
+// Devis
 const functionalityDiv = $('.functionality');
 const checkboxElements = $('.functionality-item input[type="checkbox"]');
 const radioElements = $('input[type="radio"]');
-const totalPrice = $('#totalPrice');
-let currentTotalPrice = 0;
 
 radioElements.on('change', function () {
-    const price = parseFloat($(this).data('price'));
-    currentTotalPrice = price;
     checkboxElements.prop('checked', false);
-    totalPrice.text("Votre site web à partir de : " + currentTotalPrice + "€");
     functionalityDiv.removeClass('hidden');
 
     $('.labelinfo').removeClass('active');
@@ -207,15 +202,12 @@ radioElements.on('change', function () {
 });
 
 checkboxElements.on('change', function () {
-    const price = parseFloat($(this).data('price'));
 
     if ($(this).prop('checked')) {
-        currentTotalPrice += price;
+        console.log('Check');
     } else {
-        currentTotalPrice -= price;
+        console.log('no check');
     }
-
-    totalPrice.text("Votre site web à partir de : " + currentTotalPrice + "€");
 
     var parentDiv = $(this).closest('.functionality-item');
     parentDiv.toggleClass('active');

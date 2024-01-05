@@ -716,8 +716,8 @@ h3.profession {
     font-size: 18px;
 }
 
-/* Tarification */
-.tarification .info-tarif {
+/* Devis */
+.devis .info-tarif {
     position: relative;
     display: block;
     padding: 10px;
@@ -727,18 +727,19 @@ h3.profession {
     background-color: lightgoldenrodyellow;
 }
 
-.tarification .design {
+.devis .design {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.tarification .design .labelitem,
-.tarification .functionality .functionality-item {
+.devis .design .labelitem,
+.devis .functionality .functionality-item {
     margin: 10px;
     flex: 0 0 calc(33.33% - 20px);
     max-width: calc(33.33% - 20px);
 }
 
-.tarification .design .labelitem .labelinfo {
+.devis .design .labelitem .labelinfo {
     position: relative;
     min-height: 170px;
     margin: 10px 0;
@@ -756,13 +757,13 @@ h3.profession {
     transition: all 0.3s ease-in-out;
 }
 
-.tarification .design .labelitem .labelinfo:hover,
-.tarification .design .labelitem .labelinfo.active,
-.tarification .functionality .functionality-item.active,
+.devis .design .labelitem .labelinfo:hover,
+.devis .design .labelitem .labelinfo.active,
+.devis .functionality .functionality-item.active,
 .service .service-item .service-item-inner:hover,
 input:focus,
 textarea:focus,
-.tarification .functionality .functionality-item .functionality-item-info:hover {
+.devis .functionality .functionality-item .functionality-item-info:hover {
     box-shadow: var(--skin-color) 0px 0px 4px 0px;
     -webkit-transform: scale(1.01);
     -moz-transform: scale(1.01);
@@ -771,7 +772,7 @@ textarea:focus,
     transform: scale(1.01);
 }
 
-.tarification .design .labelitem .labeltitle {
+.devis .design .labelitem .labeltitle {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 3px;
@@ -780,14 +781,14 @@ textarea:focus,
     color: var(--skin-color);
 }
 
-.tarification .design .labelitem .labeldescription {
+.devis .design .labelitem .labeldescription {
     font-size: 14px;
     color: var(--text-black-700);
     font-style: italic;
     opacity: .8;
 }
 
-.tarification .design .labelitem .price {
+.devis .design .labelitem .price {
     position: absolute;
     right: 0;
     top: 0;
@@ -799,7 +800,7 @@ textarea:focus,
     font-size: 12px;
 }
 
-.tarification .design .labelitem input {
+.devis .design .labelitem input {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -807,12 +808,16 @@ textarea:focus,
     outline: none;
 }
 
-.tarification .functionality h3 {
+.devis .functionality {
+    text-align: center;
+}
+
+.devis .functionality h3 {
     font-size: 16px;
     margin: 20px 0;
 }
 
-.tarification .functionality .functionality-item .functionality-item-info {
+.devis .functionality .functionality-item .functionality-item-info {
     position: relative;
     padding: 10px;
     border-radius: 5px;
@@ -829,7 +834,7 @@ textarea:focus,
     transition: all 0.3s ease-in-out;
 }
 
-.tarification .functionality .functionality-item .functionality-item-info .functionality-title {
+.devis .functionality .functionality-item .functionality-item-info .functionality-title {
     font-weight: 600;
     color: var(--text-black-700);
     font-size: 16px;
