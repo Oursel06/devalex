@@ -18,9 +18,26 @@
 
 <body class="">
     <div class="main-container">
+
+        <div id="overlay" class="hidden"></div>
+        <div id="modal" class="hidden">
+            <div class="modal_header">
+                <p>Titre</p>
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="modal_body">
+                <p>Vous êtes sur le point d'envoyer une demande de devis avec les options suivantes :</p>
+                <ul class="list_option"></ul>
+            </div>
+            <div class="modal_footer">
+                <a class="annuler modal_btn">Annuler</a>
+                <a class="envoyer modal_btn">Envoyer</a>
+            </div>
+        </div>
+
         <div class="aside">
             <div class="logo">
-                <a href="#"><img src="/img/logo_devalex.png" width="150" alt="devalex"></a>
+                <a href="#"><img src="./img/logo_devalex.png" width="150" alt="devalex"></a>
             </div>
             <div class="nav-toggle">
                 <span></span>
@@ -42,7 +59,7 @@
                 <li><a title="mail" href="mailto:contact@devalex.site"><img alt="mail" src="img/mail.svg" /></i></a>
                 </li>
             </ul>
-            <em>© 2023 - Alexandre Oursel</em>
+            <em>© 2024 - Alexandre Oursel</em>
         </div>
 
         <div class="accueil_notif">
@@ -355,7 +372,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="liens réseaux">
+                                                data-choix="Liens réseaux sociaux">
                                             <span class="functionality-title">Liens des réseaux sociaux</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -366,7 +383,7 @@
                                         <div title="Permet d'avoir une page indépendante pour gérer le contenu de votre site. &#013Cette option nécessite la création d'une base de données et d'une API."
                                             class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="interface administrateur">
+                                                data-choix="Interface administrateur">
                                             <span class="functionality-title"> Interface administrateur </span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -386,7 +403,8 @@
                                     title="Permet d'ajouter un ou plusieurs mode de paiement. (variable selon le(s) mode(s) de paiement)">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-choix="paiement">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="Module paiement">
                                             <span class="functionality-title">Module de paiement</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -396,7 +414,8 @@
                                     title="Permet à un utilisateur de s'enregistrer et se connecter à votre site. &#013Cette option nécessite la création d'une base de données et d'une API.&#013Comprend une page de connexion, d'inscription et de profil.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-choix="connexion">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="Module connexion">
                                             <span class="functionality-title">Module de connexion /
                                                 inscription</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
@@ -408,7 +427,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="galerie image">
+                                                data-choix="Galerie image">
                                             <span class="functionality-title">Galerie d'images</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -419,7 +438,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="formulaire contact">
+                                                data-choix="Formulaire de contact">
                                             <span class="functionality-title">Formulaire de contact</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -430,7 +449,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="carte localisation">
+                                                data-choix="Carte de localisation">
                                             <span class="functionality-title">Carte de localisation</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -441,7 +460,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="zone téléchargement">
+                                                data-choix="Zone de téléchargement">
                                             <span class="functionality-title">Zone de téléchargement</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -452,7 +471,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="moteur de recherche">
+                                                data-choix="Moteur de recherche interne">
                                             <span class="functionality-title">Moteur de recherche interne</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -462,7 +481,8 @@
                                     title="Permet d'intégrer différents médias comme des vidéos, podcasts et diaporamas">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-choix="Médias">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="Intégration de médias">
                                             <span class="functionality-title">Intégration de médias</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -473,7 +493,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="Analytic et suivi">
+                                                data-choix="Analytics et suivi">
                                             <span class="functionality-title">Analytics et suivi</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -494,7 +514,8 @@
                                     title="Permet d'ajouter une partie témoignages et avis de vos clients.">
                                     <label>
                                         <div class="functionality-item-info">
-                                            <input type="checkbox" name="functionalityOption" data-choix="Témoignages">
+                                            <input type="checkbox" name="functionalityOption"
+                                                data-choix="Témoignages et avis clients">
                                             <span class="functionality-title">Témoignages et avis clients</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -505,7 +526,7 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="Demande de devis">
+                                                data-choix="Module demande de devis">
                                             <span class="functionality-title">Module de demande de devis</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
@@ -516,14 +537,14 @@
                                     <label>
                                         <div class="functionality-item-info">
                                             <input type="checkbox" name="functionalityOption"
-                                                data-choix="thème sombre clair">
-                                            <span class="functionality-title">Thème sombre / clair</span>
+                                                data-choix="Thème sombre et clair">
+                                            <span class="functionality-title">Thème sombre et clair</span>
                                             <img class="functionality-info" src="./img/information.svg" width="20" />
                                         </div>
                                     </label>
                                 </div>
                             </div>
-                            <a href="" class="btn"> Valider mon devis </a>
+                            <a id="valide_devis" href="#devis" class="btn"> Valider mon devis </a>
                         </div>
                     </div>
                 </div>
@@ -539,7 +560,7 @@
                     <div class="row">
                         <div class="card">
                             <div class="card-side card-side-front">
-                                <img src="/img/etvlogo.png" alt="etv" />
+                                <img src="./img/etvlogo.png" alt="etv" />
                                 <h2>Projet ETV</h2>
                             </div>
                             <div class="card-side card-side-back">

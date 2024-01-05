@@ -202,13 +202,17 @@ radioElements.on('change', function () {
 });
 
 checkboxElements.on('change', function () {
+    $(this).closest('.functionality-item').toggleClass('active');
+});
 
-    if ($(this).prop('checked')) {
-        console.log('Check');
-    } else {
-        console.log('no check');
+$('#valide_devis').on('click', function () {
+    $('#modal').removeClass('hidden');
+    $('#overlay').removeClass('hidden');
+    var devisOption = [];
+    $('input[type="checkbox"][name="functionalityOption"]:checked').each(function () {
+        devisOption.push($(this).data("choix"))
+    });
+    for (i = 0; i < devisOption.length; i++) {
+        $('.list_option').append("<li>" + devisOption[i] + "</li>")
     }
-
-    var parentDiv = $(this).closest('.functionality-item');
-    parentDiv.toggleClass('active');
 });
